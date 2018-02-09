@@ -70,7 +70,7 @@ public class MindRoomba extends JFrame {
 					centerPanel.add(terrain[r][c]); 
 				}
 			}
-			
+			setHoles (); 
 		}
 
 	private void setHoles () {
@@ -84,7 +84,7 @@ public class MindRoomba extends JFrame {
 			} while (terrain [pickRow] [pickCol].hasHole ());
 			terrain [pickRow] [pickCol].setHole (true);
 			addToNeighborsHoleCount(pickRow, pickCol); 
-			terrain[pickRow] [pickCol].reveal (true, null); 
+			// terrain[pickRow] [pickCol].reveal (true); 
 		}
 	
 	}
@@ -124,8 +124,9 @@ public class MindRoomba extends JFrame {
 	private void check (int r, int c) {
 		if (r > -1 && r < GRIDSIZE && c > -1 && c < GRIDSIZE
 			&& !terrain [r][c].hasHole() && !terrain [r][c].isRevealed()) {
-			terrain [r][c].reveal(true, null);
+			terrain [r][c].reveal(true);
 			totalRevealed ++;
+			System.out.println(totalRevealed);
 			if (!terrain[r][c].isNextToHoles()) {
 				checkNeighbors(r, c); 
 			}
@@ -168,7 +169,7 @@ public class MindRoomba extends JFrame {
 		for (int r = 0; r < GRIDSIZE; r++) {
 			for (int c = 0; c < GRIDSIZE; c++) {
 				if (terrain[r][c].hasHole()) {
-					terrain[r][c].reveal(true, null);
+					terrain[r][c].reveal(true);
 				}
 			}
 		}

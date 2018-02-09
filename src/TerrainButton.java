@@ -35,11 +35,7 @@ public class TerrainButton extends JButton {
 		
 	}
 
-	public void addActionListener(ActionListener actionListener) {
 	
-		
-	}
-
 	public int getRow() {
 		return row ; 
 	}
@@ -57,11 +53,11 @@ public class TerrainButton extends JButton {
 		
 	}
 
-	public void reveal(boolean reveal, Icon image) {
+	public void reveal(boolean reveal) {
 		reveal = reveal;
 		if (revealed = true) {
 			if (hasHole()) {
-				setIcon (image);
+				setBackground (Color.BLACK);
 			} else {
 				setBackground(Color.cyan);
 				if (nextToHoles > 0) {
