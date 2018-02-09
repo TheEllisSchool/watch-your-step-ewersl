@@ -184,7 +184,7 @@ public class MindRoomba extends JFrame {
         EventQueue.invokeLater(new Runnable (){
             @Override
             public void run() {
-                new MindRoomba();
+            		new MindRoomba();
             }   
         });
 
