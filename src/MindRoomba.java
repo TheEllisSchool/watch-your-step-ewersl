@@ -41,7 +41,7 @@ public class MindRoomba extends JFrame {
 
 	private void initGUI() {
 		JPanel titlePanel = new JPanel(); 
-		add(titlePanel, BorderLayout.PAGE_START);
+		add(titlePanel, BorderLayout.PAGE_START)
 		titlePanel.setBackground(Color.WHITE);
 		JLabel titleLabel = new JLabel("Mindroomba game");
 			titlePanel.add(titleLabel); 
@@ -101,7 +101,7 @@ public class MindRoomba extends JFrame {
 	} 
 	
 	private void addToHoleCount(int row, int col) {
-		if (row > -1 && row < GRIDSIZE && col < -1 && col< GRIDSIZE ) {
+		if (row > -1 && row < GRIDSIZE && col > -1 && col< GRIDSIZE ) {
 			terrain [row] [col].increaseHoleCount (); 
 			// terrain [row] [col].reveal(true);
 		}	

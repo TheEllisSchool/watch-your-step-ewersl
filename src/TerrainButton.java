@@ -54,7 +54,7 @@ public class TerrainButton extends JButton {
 	}
 
 	public void reveal(boolean reveal) {
-		reveal = reveal;
+		revealed = reveal;
 		if (revealed = true) {
 			if (hasHole()) {
 				setBackground (Color.BLACK);
